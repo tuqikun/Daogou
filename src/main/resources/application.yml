@@ -1,0 +1,28 @@
+
+server:
+    port: 9000
+    tomcat:
+      max-threads: 200
+      max-connections: 200
+      min-spare-threads: 30
+      accept-count: 1
+
+spring:
+  datasource:
+     driverClassName: com.mysql.jdbc.Driver
+     max-active: 3500
+     max-idle: 8
+     min-idle: 8
+     initial-size: 10
+     max-wait: 100000
+     validationQuery: SELECT 1
+     url:
+     username:
+     password:
+     connection-timeout: 100000
+  jpa:
+    show-sql: true
+    database: MYSQL
+    hibernate.naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    hibernate.ddl-auto: update
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
